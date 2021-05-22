@@ -1,0 +1,22 @@
+
+
+#########################################################
+### 配置 小米的jar 包
+#########
+
+(1)在 sdk-xiaomi 目录下，执行下面的命令，注意.jar文件的路径
+mvn install:install-file -Dfile=D:\04_java\09_code\01-test\demo_test\libs\mpush-client-java-0.8.1.jar -DgroupId=com.github.mpusher -DartifactId=mpush-client-java -Dversion=0.8.1 -Dpackaging=jar
+
+(2)在 pom.xml 文件汇中， 添加如下：
+<dependency>
+  <groupId>com.xiaomi.miliao</groupId>
+  <artifactId>xmpush-server-api-http2</artifactId>
+  <version>1.0.9-SNAPSHOT</version>
+</dependency>
+
+上面的（2）已经在pom.xml文件中写了，只需要执行（1）
+
+打包：
+mvn clean package
+
+
